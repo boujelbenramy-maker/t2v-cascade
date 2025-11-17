@@ -4,7 +4,7 @@ CLI client Modal
 Usage :
 python modal/generate.py --prompt "un dragon au coucher du soleil" --img frame.png --duration 10 --camera zoom_in
 """
-import argparse, pathlib, requests
+import argparse, subprocess
 
 def main():
     parser = argparse.ArgumentParser(description="Génère une vidéo 4K 60 fps via Modal")
@@ -14,11 +14,8 @@ def main():
     parser.add_argument("--camera", default="static", choices=["static", "pan_left", "zoom_in", "dolly_out"])
     args = parser.parse_args()
 
-    print("🔥 Lancement sur Modal...")
-    # appel local Modal
-    import subprocess
     subprocess.run([
-        "modal", "run", "modal/main.py",
+        "python", "-m", "modal", "run", "modal/main.py",
         "--prompt", args.prompt,
         "--img", args.img,
         "--duration", str(args.duration),
@@ -27,3 +24,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+   
