@@ -1,0 +1,14 @@
+torch==2.3.1+cu121
+torchvision
+torchaudio
+--index-url https://download.pytorch.org/whl/cu121
+diffusers>=0.31
+transformers
+accelerate
+xformers
+imageio[ffmpeg]
+opencv-python
+controlnet-aux
+realesrgan
+rife-torch
+wav2lip-emotion
