@@ -1,3 +1,4 @@
+cat > modal/requirements.txt << 'EOF'
 torch==2.3.1+cu121
 torchvision
 torchaudio
@@ -11,4 +12,4 @@ opencv-python
 controlnet-aux
 realesrgan
 rife-torch
-wav2lip-emotion
+EOF
